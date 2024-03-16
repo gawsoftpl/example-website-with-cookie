@@ -6,8 +6,52 @@
 <meta http-equiv='pragma' content='no-cache'>
     <title>Cookie example</title>
     <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            color: #ddd;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .cookie-law-container {
+            text-align: center;
+           
+        }
+
         /* [COOKIE BANNER] */
         #cookie-law {
+            margin: auto;
             position: fixed;
             z-index: 99999;
             background: #ddd;
@@ -15,7 +59,8 @@
             text-align: center;
             padding: 90px 0;
             right: 0;
-            bottom: 0;
+            width: 800px;
+            top: 250px;
             left: 0;
         }
 
@@ -43,7 +88,7 @@
             var bodytag = document.getElementsByTagName('body')[0];
             var div = document.createElement('div');
             div.setAttribute('id','cookie-law');
-            div.innerHTML = '<p>Our website uses cookies. By continuing we assume your permission to deploy cookies, as detailed in our <a href="/privacy-policy/" rel="nofollow" title="Privacy &amp; Cookies Policy">privacy and cookies policy</a>. <a class="close-cookie-banner" href="javascript:void(0);" onclick="removeMe();"><span>X</span></a></p>';
+            div.innerHTML = '<div class="cookie-law-container"><p>Our website uses cookies. By continuing we assume your permission to deploy cookies, as detailed in our <a href="/privacy-policy/" rel="nofollow" title="Privacy &amp; Cookies Policy">privacy and cookies policy</a>. <a class="close-cookie-banner" href="javascript:void(0);" onclick="removeMe();"><span>X</span></a></p></div>';
     
             bodytag.insertBefore(div,bodytag.firstChild); // Adds the Cookie Law Banner just after the opening <body> tag
 
@@ -78,11 +123,34 @@
     </script>
 </head>
 <body>
-<div>
-    <h1>Example Domain</h1>
-    <p>This domain is for use in illustrative examples in documents. You may use this
-        domain in literature without prior coordination or asking for permission.</p>
-    <p><a href="https://www.iana.org/domains/example">More information...</a></p>
-</div>
+    <header>
+        <h1>Welcome to our Website</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    <section>
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet ligula non ligula euismod, vel luctus purus fermentum.</p>
+    </section>
+    <section>
+        <h2>Our Services</h2>
+        <ul>
+            <li>Service 1</li>
+            <li>Service 2</li>
+            <li>Service 3</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Contact Us</h2>
+        <p>Email: info@example.com</p>
+        <p>Phone: 123-456-7890</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Sample Website. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
